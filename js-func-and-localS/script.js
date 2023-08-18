@@ -1,4 +1,6 @@
-let counter = localStorage.getItem('counter') ? localStorage.getItem('counter') : 0;
+//localstorage is written as parseInt method to not face the problem which is counter increases as 1111 after refresh the page!!!!
+
+let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 0;
 
 const counterActive = document.querySelector('#counter')
 const decreaseActive = document.querySelector('#decrease')
